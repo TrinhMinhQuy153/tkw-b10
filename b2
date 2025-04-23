@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu đa cấp</title>
+  <style>
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .submenu {
+      display: none;
+      margin-left: 20px;
+    }
+    .menu-item {
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<ul>
+  <li class="menu-item" onclick="toggleMenu()">Thiết kế web ▼
+    <ul class="submenu" id="submenu">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+  </li>
+</ul>
+
+<script>
+  function toggleMenu() {
+    const submenu = document.getElementById('submenu');
+    submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
+</body>
+</html>
